@@ -183,3 +183,21 @@ if __name__ == "__main__":
         print(f"Optimal solution: {solution}")
         print(f"Optimal value: {value}")
         print(f"Basic variables: {solver.get_basic_variables()}")
+        
+    print("\n" + "="*50)
+        
+    c2 = [1, 3, 2]
+    A2 = [[1, 1, 1],
+          [2, 1, 3]]
+    b2 = [5, 8]
+    
+    solver2 = SimplexSolver(c2, A2, b2)
+    solution2, value2, status2 = solver2.solve(verbose=True)
+    
+    print(f"\nFinal Result for second problem:")
+    print(f"Status: {status2}")
+    if status2 == 'optimal':
+        print(f"Optimal solution: {solution2}")
+        print(f"Optimal value: {value2}")
+        print(f"Basic variables: {solver2.get_basic_variables()}")
+        
